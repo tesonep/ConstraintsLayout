@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "ConstraintsLayout",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"configured",
+		"constraints",
+		"solver",
+		"height",
+		"width",
+		"morph",
+		"constraintHeight",
+		"constraintWidth",
+		"attributes"
+	],
+	"name" : "ConstraintsLayout",
+	"type" : "normal"
+}

@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "LayoutProperties",
+	"category" : "ConstraintsLayout",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"morph",
+		"top",
+		"left",
+		"width",
+		"height"
+	],
+	"name" : "ConstraintsLayoutAttributes",
+	"type" : "normal"
+}
