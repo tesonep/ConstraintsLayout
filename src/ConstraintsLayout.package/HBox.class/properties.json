@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ComposableMorph",
+	"category" : "ConstraintsLayout",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"spacing",
+		"margin"
+	],
+	"name" : "HBox",
+	"type" : "normal"
+}
