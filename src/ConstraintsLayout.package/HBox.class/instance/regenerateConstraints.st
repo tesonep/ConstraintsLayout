@@ -8,7 +8,7 @@ regenerateConstraints
 	
 	submorphs ifEmpty: [ ^self ].
 	
-	size := (constraintLayout width / submorphs size) - (margin*2).
+	size := (constraintLayout width - (margin*2) - ((submorphs size - 1)*spacing)) / submorphs size.
 	submorphs do: [ :each | 
 		constraintLayout with:{ each } do: [ :am | am top cnEqual: 0 ].
 		constraintLayout with:{ each } do: [ :am | am width cnEqual: size ].

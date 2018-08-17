@@ -1,11 +1,14 @@
 {
 	"commentStamp" : "",
-	"super" : "AbstractBox",
+	"super" : "ComposableMorph",
 	"category" : "ConstraintsLayout",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "HBox",
+	"instvars" : [
+		"spacing",
+		"margin"
+	],
+	"name" : "AbstractBox",
 	"type" : "normal"
 }

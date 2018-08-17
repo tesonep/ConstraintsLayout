@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "HBox",
+	"name" : "VBox",
 	"type" : "normal"
 }
