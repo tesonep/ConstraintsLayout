@@ -30,10 +30,11 @@ exampleForm
 		with: {button. textBox. otherButton} do:[:btn :tb :other :owner | tb width cnEqual: (owner width - btn width - 10) strength: ClStrength weak];
 
 		with: {button. textBox. otherButton} do:[:btn :tb :other :owner | other top cnEqual: (tb bottom + 10)  strength: ClStrength weak];
-		of: otherButton size: 100@50;
+		with: {button. textBox. otherButton} do:[:btn :tb :other :owner | other bottom cnEqual: (owner height - 5)];
+		of: otherButton size: 100@30;
 
 		with: {button. textBox. otherButton} do:[:btn :tb :other :owner | btn left cnEqual: (tb right + 5)  strength: ClStrength weak];
-		of: button size: 100@50;
+		of: button size: 100@30;
 
 		yourself.
 
