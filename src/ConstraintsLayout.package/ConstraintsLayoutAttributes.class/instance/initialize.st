@@ -6,3 +6,5 @@ initialize
 	left := ClVariable newWith: morph left.
 	width := ClVariable newWith: morph width.
 	height := ClVariable newWith: morph height.
+	
+	constraints := OrderedCollection new.

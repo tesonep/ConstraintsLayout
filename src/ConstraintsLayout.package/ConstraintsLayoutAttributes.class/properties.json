@@ -10,7 +10,8 @@
 		"top",
 		"left",
 		"width",
-		"height"
+		"height",
+		"constraints"
 	],
 	"name" : "ConstraintsLayoutAttributes",
 	"type" : "normal"

@@ -1,17 +1,15 @@
 initialization
 regenerateConstraints
 
-	| size constraintLayout |
+	| constraintLayout |
 	
 	constraintLayout := self layoutPolicy.
 	constraintLayout clearConstraints.
 	
 	submorphs ifEmpty: [ ^self ].
 	
-	size := (constraintLayout width - (margin*2) - ((submorphs size - 1)*spacing)) / submorphs size.
 	submorphs do: [ :each | 
-		constraintLayout with:{ each } do: [ :am | am top cnEqual: 0 ].
-		constraintLayout with:{ each } do: [ :am | am width cnEqual: size ].
+		constraintLayout with:{ each } do: [ :am | am verticalCenter cnEqual: (constraintLayout height / 2) ].
 		constraintLayout with:{ each } do: [ :am | am height cnEqual: constraintLayout height ] ].
 
 	constraintLayout with: {submorphs first} do: [ :sm | sm left cnEqual: margin ].	
