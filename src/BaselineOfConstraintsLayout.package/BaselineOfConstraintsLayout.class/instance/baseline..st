@@ -7,12 +7,10 @@ baseline: spec
 		do: [ 
 	
 			spec
-				baseline: 'BabelsbergS' 
-				with: [ 
-					spec repository: 'github://babelsberg/babelsberg-s/repository';
-						  loads: 'Cassowary' ].
+				baseline: 'Cassowary' 
+				with: [ spec repository: 'github://Ducasse/Cassowary' ].
 
-			spec package: 'ConstraintsLayout' with: [ spec requires: 'BabelsbergS'].
+			spec package: 'ConstraintsLayout' with: [ spec requires: 'Cassowary'].
 			
 			spec
 				group: 'default' with: #('ConstraintsLayout').
