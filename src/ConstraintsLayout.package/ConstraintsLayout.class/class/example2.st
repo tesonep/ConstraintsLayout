@@ -15,7 +15,6 @@ example2
 			| m |
 			m := Morph new.
 			m color: Color random.
-			constraintsLayout addMorph: m.
 			main addMorph: m.
 			morphs add: m ].
 

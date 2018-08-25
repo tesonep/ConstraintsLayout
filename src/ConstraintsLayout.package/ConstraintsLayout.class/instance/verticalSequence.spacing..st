@@ -2,7 +2,7 @@ API - constraints
 verticalSequence: aCollection spacing: spacing 
 
 	| layoutProps accummulated |
-	layoutProps := aCollection collect: [ :each | self attributesFor: each ].
+	layoutProps := aCollection collect: [ :each | each constraintsLayoutAttributes ].
 
 	accummulated := 0.
 	

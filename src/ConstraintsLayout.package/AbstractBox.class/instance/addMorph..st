@@ -1,7 +1,5 @@
 initialization
 addMorph: aMorph
 
-	super addMorphBack: aMorph.
-	self layoutPolicy addMorph: aMorph. 
-	
+	super addMorphBack: aMorph.	
 	self regenerateConstraints.

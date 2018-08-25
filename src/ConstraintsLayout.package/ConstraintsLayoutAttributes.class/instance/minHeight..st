@@ -1,4 +1,4 @@
 API-constraints
-minHeight: minHeight
+minHeight: aValue
 
-	constraints add: (MinValueLayoutConstraint on: self value: minHeight targetProperty: #height ownerProperty: #height)
+	self minProp: #height value: aValue

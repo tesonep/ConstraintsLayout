@@ -10,10 +10,7 @@ regenerateConstraints
 	
 	size := (constraintLayout height - (margin*2) - ((submorphs size - 1)*spacing)) / submorphs size.
 	
-	submorphs do: [ :each | 
-		constraintLayout with:{ each } do: [ :am | am left cnEqual: 0 ].
-		constraintLayout with:{ each } do: [ :am | am height cnEqual: size ].
-		constraintLayout with:{ each } do: [ :am | am width cnEqual: constraintLayout width ] ].
+	submorphs do: [ :each | constraintLayout with:{ each } do: [ :am | am horizontalCenter cnEqual: (constraintLayout width / 2) ]].
 
 	constraintLayout with: {submorphs first} do: [ :sm | sm top cnEqual: margin ].	
 

@@ -19,10 +19,6 @@ exampleForm
 	main addMorph: button.
 	main addMorph: otherButton.
 
-	constraintsLayout addMorph: textBox.
-	constraintsLayout addMorph: button.
-	constraintsLayout addMorph: otherButton.
-
 	constraintsLayout
 		of: textBox minSize: 75@75;
 		of: textBox topLeft: 0@0;

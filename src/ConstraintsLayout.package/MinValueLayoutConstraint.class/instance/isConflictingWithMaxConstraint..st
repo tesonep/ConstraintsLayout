@@ -1,0 +1,4 @@
+conflicting
+isConflictingWithMaxConstraint: aMaxValueLayoutConstraint 
+	
+	^ false

@@ -7,13 +7,11 @@ layout: aMorph in: aRectangle
 		
 	[ 
 	   self runSolver: aMorph.
-	   solver infeasibleRows isNotEmpty and: [ retries > 0 ].
+		solver infeasibleRows ifNotEmpty: [ solver infeasibleRows logCr ].
+	   solver infeasibleRows isNotEmpty and: [ retries > 0 ].		
 	] whileTrue: [ configured := false. retries := retries - 1. ].
 	
-"	attributes values anyOne logCr.
-	{ width value. height value } logCr.
-	constraints logCr.
-	solver infeasibleRows logCr.
-"		
-	aMorph submorphsDo: [ :each | self attributesFor: each ifPresent: #updateAttributes ].
+	aMorph submorphs 
+		select: [ :each | each hasConstraintsLayoutAttributes ]
+		thenDo: [ :each | each constraintsLayoutAttributes updateAttributes ].
 	

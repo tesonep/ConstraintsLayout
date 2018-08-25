@@ -1,0 +1,4 @@
+*ConstraintsLayout
+initializeDefaultSize: aConstraintsLayoutAttributes 
+	
+	aConstraintsLayoutAttributes initializeMorph

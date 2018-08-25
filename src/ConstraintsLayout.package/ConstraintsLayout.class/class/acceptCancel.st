@@ -16,14 +16,8 @@ acceptCancel
 
 	main addMorph: ok.
 	main addMorph: cancel.
+		
+	constraintsLayout horizontalSequence: { ok. cancel } spacing: 15.
+	ok constraintsLayoutAttributes left: 30.
 	
-	constraintsLayout addMorph: ok.
-	constraintsLayout addMorph: cancel.
-	
-	constraintsLayout 
-		of: ok size: 75@20;
-		of: cancel size: 75@20;
-		horizontalSequence: { ok. cancel } spacing: 15;
-		with: { cancel } do: [ :cancelBtn | cancelBtn right cnEqual: 20 ].
-
 	main openInWindow

@@ -11,10 +11,6 @@ example1
 	(morph1 := Morph new) color: Color green.		
 	(morph2 := Morph new) color: Color blue.	
 	(morph3 := Morph new) color: Color orange.
-		
-	constraintsLayout addMorph: morph1.	
-	constraintsLayout addMorph: morph2.	
-	constraintsLayout addMorph: morph3.	
 	
 	main addMorph: morph1.
 	main addMorph: morph2.

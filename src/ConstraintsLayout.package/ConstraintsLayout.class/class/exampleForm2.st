@@ -14,11 +14,8 @@ exampleForm2
 	textBoxes := (1 to: 5) collect: [ :i | main newTextEntryFor: nil getText: nil setText: nil help: nil  ].
 	labels := (1 to: 5) collect: [ :i | main newLabel: 'Field' , i asString ].
 
-	textBoxes do: [ :t | 
-		main addMorph: t.
-		constraintsLayout addMorph: t ].
-	labels do: [ :l | main addMorph: l.
-		constraintsLayout addMorph: l ].	
+	textBoxes do: [ :t | main addMorph: t ].
+	labels do: [ :l | main addMorph: l ].	
 
 	textBoxes do: [ :t | 
 		constraintsLayout prop: #height of: t equal: 25.

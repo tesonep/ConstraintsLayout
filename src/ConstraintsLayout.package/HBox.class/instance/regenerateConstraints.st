@@ -9,8 +9,7 @@ regenerateConstraints
 	submorphs ifEmpty: [ ^self ].
 	
 	submorphs do: [ :each | 
-		constraintLayout with:{ each } do: [ :am | am verticalCenter cnEqual: (constraintLayout height / 2) ].
-		constraintLayout with:{ each } do: [ :am | am height cnEqual: constraintLayout height ] ].
+		constraintLayout with:{ each } do: [ :am | am verticalCenter cnEqual: (constraintLayout height / 2) ]].
 
 	constraintLayout with: {submorphs first} do: [ :sm | sm left cnEqual: margin ].	
 
