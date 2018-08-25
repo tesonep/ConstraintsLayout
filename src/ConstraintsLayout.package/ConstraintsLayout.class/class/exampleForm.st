@@ -6,7 +6,6 @@ exampleForm
 	<script>
 	
 	main := ComposableMorph new.
-	main extent: 400@400.
 	main color: Color gray.
 	constraintsLayout := ConstraintsLayout on: main.
 	main layoutPolicy: constraintsLayout.
@@ -34,4 +33,5 @@ exampleForm
 
 		yourself.
 
+	constraintsLayout useMinimalExtent.
 	main openInWindow

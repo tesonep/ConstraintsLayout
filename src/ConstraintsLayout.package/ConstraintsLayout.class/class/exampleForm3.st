@@ -6,7 +6,6 @@ exampleForm3
 	<script>
 	
 	main := ComposableMorph new.
-	main extent: 400@400.
 	main color: Color gray.
 	constraintsLayout := ConstraintsLayout on: main.
 	main layoutPolicy: constraintsLayout.
@@ -34,5 +33,6 @@ exampleForm3
 	constraintsLayout prop: #top of: textBoxes first equal: 15.
 	constraintsLayout verticalSequence: textBoxes spacing: 15.
 
+	constraintsLayout useMinimalExtent.
 
 	main openInWindow

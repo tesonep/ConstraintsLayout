@@ -13,7 +13,8 @@
 		"constraintHeight",
 		"constraintWidth",
 		"constraints",
-		"morph"
+		"morph",
+		"minimalExtent"
 	],
 	"name" : "ConstraintsLayout",
 	"type" : "normal"
