@@ -1,0 +1,4 @@
+conflicting
+isOnWidthOrHeight: anotherConstraint
+
+	^ false

@@ -1,7 +1,3 @@
-API-calculating
+API - calculating
 useMinimalExtent
-	
-	self removeBoundsConstraints.
-	self doConfigureSolver.
-	
-	morph extent: (minimalExtent + 5)
+	morph extent: self minimalExtent

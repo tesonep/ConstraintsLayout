@@ -1,0 +1,4 @@
+conflictings
+isConflictingWithEqualConstraint: anEqualValueLayoutConstraint
+
+	self subclassResponsibility 

@@ -1,5 +1,10 @@
-private - updating
+private - calculating
 updateBounds: aRectangle
 	self removeBoundsConstraints.
-	solver addConstraint: (constraintWidth := width cnEqual: aRectangle width).
-	solver addConstraint: (constraintHeight := height cnEqual: aRectangle height)
+	
+	constraintWidth := width cnEqual: aRectangle width.
+	constraintHeight := height cnEqual: aRectangle height.
+
+	solver ifNotNil: [ 
+		solver addConstraint: constraintWidth.
+		solver addConstraint: constraintHeight].

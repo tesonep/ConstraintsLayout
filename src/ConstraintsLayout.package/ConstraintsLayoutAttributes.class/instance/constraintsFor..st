@@ -14,6 +14,9 @@ constraintsFor: layout
 	result add: (left cnLEQ: layout width).
 
 	constraints do: [ :each | each addTo: result forLayout: layout ].
+
+	(MinimalContentSizeLayoutConstraint on: self)
+		addTo: result forLayout: layout.
 	
 	^ result
 	

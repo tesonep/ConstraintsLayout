@@ -8,5 +8,7 @@ initialize
 	height := ClVariable newWith: morph height.
 	
 	constraints := OrderedCollection new.
+
+	self addConstraint: (DefaultContentSizeLayoutConstraint on: self).	
 	
 	morph initializeDefaultSize: self.

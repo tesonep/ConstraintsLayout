@@ -1,0 +1,4 @@
+constraints
+comparisonSelector
+
+	^ #cnEqual: 

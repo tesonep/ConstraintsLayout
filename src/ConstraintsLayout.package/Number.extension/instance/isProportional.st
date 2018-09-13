@@ -1,0 +1,4 @@
+*ConstraintsLayout
+isProportional
+
+	^ false

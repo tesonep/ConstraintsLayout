@@ -1,0 +1,4 @@
+conflictings
+isConflictingWith: anotherConstraint 
+	
+	^ true

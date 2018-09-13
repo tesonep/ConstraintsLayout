@@ -1,7 +1,7 @@
 examples
 exampleForm2
 
-	| main constraintsLayout textBoxes labels |
+	| main constraintsLayout textBoxes labels vbox|
 	
 	<script>
 	
@@ -13,25 +13,31 @@ exampleForm2
 	textBoxes := (1 to: 5) collect: [ :i | main newTextEntryFor: nil getText: nil setText: nil help: nil  ].
 	labels := (1 to: 5) collect: [ :i | main newLabel: 'Field' , i asString ].
 
-	textBoxes do: [ :t | main addMorph: t ].
-	labels do: [ :l | main addMorph: l ].	
-
 	textBoxes do: [ :t | 
-		constraintsLayout prop: #height of: t equal: 25.
-		constraintsLayout with: { t } do: [ :tb :owner | tb width cnEqual: owner width * 0.75 -10 ].
-		constraintsLayout with: { t } do: [ :tb :owner | tb right cnEqual: owner width - 10 ]. ].
+		t constraintsLayoutAttributes 
+			height: 25;
+			width: (75 percent) proportional;
+			margin: 10].
 
 	labels do: [ :l | 
-		constraintsLayout prop: #height of: l equal: 20.
-		constraintsLayout with: { l } do: [ :lab :owner | lab width cnEqual: owner width * 0.25 -10 ].
-		constraintsLayout with: { l } do: [ :lab :owner | lab left cnEqual: 15 ]. ].
+		l constraintsLayoutAttributes 
+			height: 20;
+			width: (25 percent) proportional;
+			margin: 15 ].
 
+	vbox := VBox new.
+	vbox color: Color red.
 
-	labels with: textBoxes do: [ :l :t | 
-		constraintsLayout with: {l. t.} do: [:lab :tb | lab verticalCenter cnEqual: tb verticalCenter ] ].
+	labels with: textBoxes do: [ :l :t | |hbox|
+		hbox := HBox new addMorph: l; addMorph: t; yourself.
+		hbox constraintsLayoutAttributes width: 100 percent proportional.
+		vbox addMorph: hbox.].
 
-	constraintsLayout prop: #top of: textBoxes first equal: 15.
-	constraintsLayout verticalSequence: textBoxes spacing: 15.
+	vbox constraintsLayoutAttributes 
+		width: 100 percent proportional;
+		height: 100 percent proportional.
 
-	constraintsLayout useMinimalExtent.
+	main addMorph: vbox.
+	
+	main extent: 500@500.
 	main openInWindow

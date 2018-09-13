@@ -1,5 +1,5 @@
 initialization
-regenerateConstraints
+doRegenerateConstraints
 
 	| constraintLayout |
 	
@@ -15,4 +15,5 @@ regenerateConstraints
 
 	constraintLayout horizontalSequence: submorphs spacing: spacing.
 
-	
+	constraintLayout with: {submorphs last} do: [ :sm | 
+		constraintLayout width cnGEQ: (sm right + margin)].	

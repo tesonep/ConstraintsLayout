@@ -1,0 +1,4 @@
+testing
+isProportional
+	
+	^ true

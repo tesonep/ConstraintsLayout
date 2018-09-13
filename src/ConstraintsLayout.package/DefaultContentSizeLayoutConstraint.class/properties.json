@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "AbstractLayoutConstraint",
+	"category" : "ConstraintsLayout-Constraints",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "DefaultContentSizeLayoutConstraint",
+	"type" : "normal"
+}

@@ -3,7 +3,6 @@ example3
 
 	| example |
 	example := self new.
-	example extent: 300 @ 300.
 	
 	example spacing: 15.
 	example margin: 15.

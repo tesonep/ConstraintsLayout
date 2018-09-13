@@ -1,18 +1,17 @@
 API - layout
 layout: aMorph in: aRectangle 
-			
-	| retries |
 	
-	(minimalExtent isNotNil and: [ (minimalExtent x > aRectangle width) 
-		or: [minimalExtent y > aRectangle height] ]) ifTrue: [ ^ self ].
+	| rectToUse |		
+	minimalExtent ifNil: [ self minimalExtent ].	
 	
-	retries := 3.
-		
-	[ 
-	   self calculateWithBounds: aMorph.
-		solver infeasibleRows ifNotEmpty: [ solver infeasibleRows logCr ].
-	   solver infeasibleRows isNotEmpty and: [ retries > 0 ].		
-	] whileTrue: [ configured := false. retries := retries - 1. ].
+	((minimalExtent x > aRectangle width) 
+		or: [minimalExtent y > aRectangle height]) 
+		ifTrue: [ 
+			'Using Min Extent:' , minimalExtent asString.
+			rectToUse := 0@0 corner: minimalExtent ] 
+		ifFalse: [ rectToUse := aMorph layoutBounds].
+	
+	self calculateWithBounds: rectToUse.
 	
 	aMorph submorphs 
 		select: [ :each | each hasConstraintsLayoutAttributes ]

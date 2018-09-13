@@ -1,5 +1,5 @@
-API - layout
-calculateWithBounds: aMorph
+API - calculating
+calculateWithBounds: bounds
 
-	self configureSolver.
-	self updateBounds: aMorph layoutBounds.
+	self calculateSolver.
+	self updateBounds: bounds.

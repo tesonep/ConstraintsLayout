@@ -33,6 +33,6 @@ exampleForm3
 	constraintsLayout prop: #top of: textBoxes first equal: 15.
 	constraintsLayout verticalSequence: textBoxes spacing: 15.
 
-	constraintsLayout useMinimalExtent.
-
+	"constraintsLayout useMinimalExtent."
+	main extent: 400@400.
 	main openInWindow

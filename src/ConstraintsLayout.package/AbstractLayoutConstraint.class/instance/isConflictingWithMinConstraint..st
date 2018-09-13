@@ -1,0 +1,4 @@
+conflictings
+isConflictingWithMinConstraint: aMinValueLayoutConstraint
+
+	self subclassResponsibility 

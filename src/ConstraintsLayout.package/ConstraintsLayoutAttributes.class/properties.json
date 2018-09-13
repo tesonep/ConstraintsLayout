@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "LayoutProperties",
+	"super" : "Object",
 	"category" : "ConstraintsLayout",
 	"classinstvars" : [ ],
 	"pools" : [ ],
@@ -11,7 +11,9 @@
 		"left",
 		"width",
 		"height",
-		"constraints"
+		"constraints",
+		"margin",
+		"name"
 	],
 	"name" : "ConstraintsLayoutAttributes",
 	"type" : "normal"
